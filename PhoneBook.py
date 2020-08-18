@@ -19,15 +19,19 @@ while True:
 
     if choice == 1:
         print(phone_book)
-    elif choice == 2:    # TODO сделать проверку существования телефона в справочнике
+    elif choice == 2:
         tel = input("Введите номер телефона: ")
-        value = input_data()
-        phone_book[tel] = value
+        if tel in phone_book:
+            print("Такоей номер уже существует")
+            continue
+        else:
+            value = input_data()
+            phone_book[tel] = value
     elif choice == 3:   # TODO Редактирование записи
         print()
     elif choice == 4:   # TODO удаление записи
         print()
-    elif choice == 0:   
+    elif choice == 0:
         print("До свидания")
         break
     else:
