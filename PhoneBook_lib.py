@@ -22,4 +22,11 @@ def menu():
     print("2. Добавить запись")
     print("3. Редактировать запись")
     print("4. Удалить запись")
+    print("5. Сохранить файл")
     print("0. Выход")
+
+def show(phone_book):
+    for tel in phone_book:
+        value = phone_book[tel]
+        temp = value[0] + " " + value[1] + " " + value[2] + " " + value[3]
+        print(tel, ':', temp)
